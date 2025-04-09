@@ -2,6 +2,7 @@ from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 import smtplib
 import time
+import os
 
 # Configs
 URL = "https://shop.royalchallengers.com/ticket"
@@ -12,7 +13,7 @@ LAST_COUNT = None
 # Email config
 EMAIL_SENDER = "ankit.singh2099@gmail.com"
 EMAIL_RECEIVER = "ankit.singh2099@gmail.com"
-EMAIL_PASSWORD = "eoth xzhm ibho aohe"  # Use Gmail App Password
+EMAIL_PASSWORD = os.environ.get("EMAIL_PASSWORD")
 
 def get_class_count():
     with sync_playwright() as p:
