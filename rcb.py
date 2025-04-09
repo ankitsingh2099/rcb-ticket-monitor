@@ -64,6 +64,7 @@ def monitor():
         time.sleep(CHECK_INTERVAL)
 
 if __name__ == "__main__":
+    print("Starting RCB Ticket Monitor...")
     monitor()
 
 # pip install playwright
