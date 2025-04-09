@@ -4,4 +4,4 @@
 python -m playwright install
 
 # Start the script
-python monitor.py
+python rcb.py
