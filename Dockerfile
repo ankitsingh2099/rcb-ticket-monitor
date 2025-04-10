@@ -14,5 +14,7 @@ COPY . .
 # Install Playwright dependencies and browsers
 RUN playwright install-deps
 
+RUN playwright install
+
 # Set the entrypoint
 CMD ["python", "rcb.py"]
