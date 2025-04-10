@@ -15,4 +15,4 @@ COPY . .
 RUN playwright install-deps
 
 # Set the entrypoint
-CMD ["python", "monitor.py"]
+CMD ["python", "rcb.py"]
