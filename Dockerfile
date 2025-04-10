@@ -1,5 +1,5 @@
 # Use the official Playwright image (includes Node + Python + Browsers)
-FROM mcr.microsoft.com/playwright/python:v1.51.1-jammy
+FROM mcr.microsoft.com/playwright/python:v1.42.0-jammy
 
 # Set the working directory
 WORKDIR /app
@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Install Playwright dependencies and browsers
-RUN playwright install
+RUN playwright install-deps
 
 # Set the entrypoint
 CMD ["python", "monitor.py"]
